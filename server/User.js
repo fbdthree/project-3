@@ -1,1 +1,1 @@
-import { Model, Schema } from "mongoose";
+require("") { Model, Schema } from "mongoose";

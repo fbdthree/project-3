@@ -5,14 +5,16 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev":"concurrently\"cd server && npm run dev\" \"cd client && npm start\""
+    "dev": "concurrently \"cd server && npm run dev\" \"cd client && npm start\"",
+    "start": "node server/src/server.js",
+    "install": "cd server && npm i && cd ../client && npm i",
+    "seed": "cd server && npm run seed",
+    "build": "cd client && npm run build"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "concurrently": "^7.6.0",
-    "git": "^0.1.5",
-    "init": "^0.1.2"
+    "concurrently": "^7.6.0"
   }
 }
