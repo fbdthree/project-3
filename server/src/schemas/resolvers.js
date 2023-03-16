@@ -1,11 +1,11 @@
 const { AuthenticationError } = require('apollo-server-express');
 const { User, PokePost } = require('../models');
-const { auth } = require('../../utils/auth');
+const { signToken } = require('../../utils/auth');
 
 const resolvers = {
   Query: {
     users: async () => {
-      return User.find().populate('pokePost');
+      return User.find().populate('pokePosts');
     },
     user: async (parent, { username }) => {
       return User.findOne({ username }).populate('pokePosts');
