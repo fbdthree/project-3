@@ -6,32 +6,32 @@ export const QUERY_USER = gql`
       _id
       username
       email
-      thoughts {
+      pokePosts {
         _id
-        thoughtText
+        pokePostText
         createdAt
       }
     }
   }
 `;
 
-export const QUERY_THOUGHTS = gql`
-  query getThoughts {
-    thoughts {
+export const QUERY_POKEPOSTS = gql`
+  query getPokePosts {
+    pokePosts {
       _id
-      thoughtText
-      thoughtAuthor
+      pokePostText
+      pokePostAuthor
       createdAt
     }
   }
 `;
 
-export const QUERY_SINGLE_THOUGHT = gql`
-  query getSingleThought($thoughtId: ID!) {
-    thought(thoughtId: $thoughtId) {
+export const QUERY_SINGLE_POKEPOST = gql`
+  query getSinglePokePost($pokePostId: ID!) {
+    pokePost(pokePostId: $pokePostId) {
       _id
-      thoughtText
-      thoughtAuthor
+      pokePostText
+      pokePostAuthor
       createdAt
       comments {
         _id
@@ -49,10 +49,10 @@ export const QUERY_ME = gql`
       _id
       username
       email
-      thoughts {
+      pokePosts {
         _id
-        thoughtText
-        thoughtAuthor
+        pokePostText
+        pokePostAuthor
         createdAt
       }
     }
