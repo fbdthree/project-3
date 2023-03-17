@@ -11,7 +11,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import Signup from './pages/Signup';
 import Login from './pages/Login';
-import SingleThought from './pages/SingleThought';
+import SinglePokePost from './pages/SinglePokePost';
 import Profile from './pages/Profile';
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -69,8 +69,8 @@ function App() {
                 element={<Profile />}
               />
               <Route 
-                path="/thoughts/:thoughtId"
-                element={<SingleThought />}
+                path="/pokePosts/:pokePostId"
+                element={<SinglePokePost />}
               />
             </Routes>
           </div>
@@ -82,3 +82,6 @@ function App() {
 }
 
 export default App;
+
+
+
