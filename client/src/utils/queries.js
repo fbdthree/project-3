@@ -28,7 +28,7 @@ export const QUERY_POKEPOSTS = gql`
 
 export const QUERY_SINGLE_POKEPOST = gql`
   query getSinglePokePost($pokePostId: ID!) {
-    pokePost(pokePostId: $pokePostId) {
+    pokePost1(pokePostId: $pokePostId) {
       _id
       pokePostText
       pokePostAuthor
