@@ -18,7 +18,7 @@ const SinglePokePost = () => {
     variables: { pokePostId: pokePostId },
   });
 
-  const pokePost = data?.pokePost || {};
+  const pokePost = data?.pokePost1 || {};
 
   if (loading) {
     return <div>Loading...</div>;
@@ -49,7 +49,7 @@ const SinglePokePost = () => {
         <CommentList comments={pokePost.comments} />
       </div>
       <div className="m-3 p-4" style={{ border: '1px dotted #1a1a1a' }}>
-        <CommentForm pokePost={pokePost._id} />
+        <CommentForm pokePostId={pokePost._id} />
       </div>
     </div>
   );

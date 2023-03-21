@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { useMutation } from '@apollo/client';
+import { useMutation, useQuery } from '@apollo/client';
 
 import { ADD_POKEPOST } from '../../utils/mutations';
 import { QUERY_POKEPOSTS, QUERY_ME } from '../../utils/queries';
@@ -11,25 +11,26 @@ const PokePostForm = () => {
   const [pokePostText, setPokePostText] = useState('');
 
   const [characterCount, setCharacterCount] = useState(0);
-
+  const { data, loading } = useQuery(QUERY_POKEPOSTS)
+  const userQuery = useQuery(QUERY_ME)
   const [addPokePost, { error }] = useMutation(ADD_POKEPOST, {
     update(cache, { data: { addPokePost } }) {
       try {
-        const { pokePosts } = cache.readQuery({ query: QUERY_POKEPOSTS });
-
+        const pokePosts = cache.readQuery({ query: QUERY_POKEPOSTS });
+debugger
         cache.writeQuery({
           query: QUERY_POKEPOSTS,
-          data: { pokePosts: [addPokePost, ...pokePosts] },
+          data: { pokePosts: [addPokePost, ...(pokePosts?.pokePosts??{})] },
         });
       } catch (e) {
         console.error(e);
       }
 
       // update me object's cache
-      const { me } = cache.readQuery({ query: QUERY_ME });
+      const user = cache.readQuery({ query: QUERY_ME });
       cache.writeQuery({
         query: QUERY_ME,
-        data: { me: { ...me, pokePosts: [...me.pokePosts, addPokePost] } },
+        data: { me: { ...(user?.me??{}), pokePosts: [...(user?.me??{}).pokePosts, addPokePost] } },
       });
     },
   });
@@ -67,9 +68,8 @@ const PokePostForm = () => {
       {Auth.loggedIn() ? (
         <>
           <p
-            className={`m-0 ${
-              characterCount === 280 || error ? 'text-danger' : ''
-            }`}
+            className={`m-0 ${characterCount === 280 || error ? 'text-danger' : ''
+              }`}
           >
             Character Count: {characterCount}/280
           </p>
