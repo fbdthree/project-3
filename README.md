@@ -47,4 +47,4 @@ The application is deployed on Heroku and can be accessed at [insert deployed ap
 
 
 ## Credits
-The development team for PokemAn includes Monica Pong, Braden Dawson and Jarrett Jennings. We would like to thank our instructor and teaching assistants for their guidance throughout the development process.
+The development team for PokemAn includes [Monica Pong](https://github.com/monicapong), [Braden Dawson](https://github.com/fbdthree/) and [Jarrett Jennings](https://github.com/codingjarrett). We would like to thank our instructor and teaching assistants for their guidance throughout the development process.
