@@ -40,13 +40,13 @@ const CommentForm = ({ pokePostId }) => {
   };
 
   return (
-    <div>
-      <h4>What are your pokePosts on this pokePost?</h4>
+    <div className='col-12 p-5'>
+      <h4 className='font-semibold leading-6 text-gray-900'>What are your pokeThoughts on this pokePost?</h4>
 
       {Auth.loggedIn() ? (
         <>
           <p
-            className={`m-0 ${
+            className={`m-0 text-sm leading-6 text-gray-900 ${
               characterCount === 280 || error ? 'text-danger' : ''
             }`}
           >
@@ -69,7 +69,7 @@ const CommentForm = ({ pokePostId }) => {
             </div>
 
             <div className="col-12 col-lg-3">
-              <button className="btn btn-primary btn-block py-3" type="submit">
+              <button className="btn btn-danger btn-block py-3" type="submit">
                 Add Comment
               </button>
             </div>

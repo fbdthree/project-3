@@ -15,6 +15,7 @@ import SinglePokePost from './pages/SinglePokePost';
 import Profile from './pages/Profile';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import PokeBlog from './pages/PokeBlog';
 
 // Construct our main GraphQL API endpoint
 const httpLink = createHttpLink({
@@ -67,6 +68,10 @@ function App() {
               <Route 
                 path="/profiles/:username"
                 element={<Profile />}
+              />
+              <Route 
+                path="/pokeBlog"
+                element={<PokeBlog />}
               />
               <Route 
                 path="/s/:pokePostId"

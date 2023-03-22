@@ -3,51 +3,53 @@ import { Link } from 'react-router-dom';
 
 const PokePostList = ({
   pokePosts,
-  title,
-  showTitle = true,
   showUsername = true,
 }) => {
   if (!pokePosts.length) {
-    return <h3>No PokePosts Yet</h3>;
+    return <h3 className='text-center m-8 p-4'>No PokePosts Yet</h3>;
   }
 
-  return (
-    <div>
-      {showTitle && <h3>{title}</h3>}
-      {pokePosts &&
-        pokePosts.map((pokePost) => (
-          <div key={pokePost._id} className="card mb-3">
-            <h4 className="card-header bg-primary text-light p-2 m-0">
-              {showUsername ? (
-                <Link
-                  className="text-light"
-                  to={`/profiles/${pokePost.pokePostAuthor}`}
-                >
-                  {pokePost.pokePostAuthor} <br />
-                  <span style={{ fontSize: '1rem' }}>
-                    had this pokePost on {pokePost.createdAt}
-                  </span>
-                </Link>
-              ) : (
-                <>
-                  <span style={{ fontSize: '1rem' }}>
-                    You had this pokePost on {pokePost.createdAt}
-                  </span>
-                </>
-              )}
-            </h4>
-            <div className="card-body bg-light p-2">
-              <p>{pokePost.pokePostText}</p>
-            </div>
+  const renderedList = pokePosts.map((pokePost) => {
+    return (
+      <div key={pokePost._id} className="rounded-xl overflow-hidden shadow-lg bg-slate-200 m-8">
+
+        <h4 className="card-header bg-danger text-light p-2 m-0">
+          {showUsername ? (
             <Link
-              className="btn btn-primary btn-block btn-squared"
-              to={`/s/${pokePost._id}`}
-            >pokePost
-              Join the discussion on this pokePost.
+              className="text-light"
+              to={`/profiles/${pokePost.pokePostAuthor}`}
+            >
+              {pokePost.pokePostAuthor} <br />
+              <span style={{ fontSize: '1rem' }}>
+                had this pokeThought on {pokePost.createdAt}
+              </span>
             </Link>
-          </div>
-        ))}
-    </div>
+          ) : (
+            <>
+              <span style={{ fontSize: '1rem' }}>
+                You had this pokeThought on {pokePost.createdAt}
+              </span>
+            </>
+          )}
+        </h4>
+        <div className="card-body p-2 ">
+          <p>{pokePost.pokePostText}</p>
+        </div>
+        <Link
+          className="btn btn-danger btn-block btn-squared"
+          to={`/s/${pokePost._id}`}
+        >pokePost
+          Join the discussion on this pokePost.
+        </Link>
+
+      </div>
+    )
+  })
+
+  return (
+
+      <div className='container'>{renderedList}</div>
+
   );
 };
 
