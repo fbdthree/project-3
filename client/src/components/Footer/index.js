@@ -168,7 +168,7 @@ const Footer = () => {
           </button>
         )}
         
-        <h4>
+        <h4 className='text-xs'>
           Made with{' '}
           <span
             className="emoji"
@@ -180,7 +180,7 @@ const Footer = () => {
           </span>{' '}
           by the Pokemon team. 
         </h4>
-        <h2>Random Pokemon: {randomPokemon}</h2>
+        <h2 className='text-base'>Random Pokemon Buddy: {randomPokemon}</h2>
         {randomPokemonImageUrl && (
           <img className='block m-auto' src={randomPokemonImageUrl} alt={`A picture of ${randomPokemon}`} />
         )}

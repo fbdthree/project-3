@@ -63,7 +63,7 @@ debugger
 
   return (
     <div className='col-12 p-5'>
-      <h3 className='font-semibold leading-6 text-gray-900'>What's on your pokemind?</h3>
+      <h3 className='font-semibold leading-6 text-gray-900'>What's on your PokeMind?</h3>
 
       {Auth.loggedIn() ? (
         <>

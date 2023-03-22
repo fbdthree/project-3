@@ -6,7 +6,7 @@ const PokePostList = ({
   showUsername = true,
 }) => {
   if (!pokePosts.length) {
-    return <h3>No PokePosts Yet</h3>;
+    return <h3 className='text-center m-8 p-4'>No PokePosts Yet</h3>;
   }
 
   const renderedList = pokePosts.map((pokePost) => {
@@ -21,13 +21,13 @@ const PokePostList = ({
             >
               {pokePost.pokePostAuthor} <br />
               <span style={{ fontSize: '1rem' }}>
-                had this pokePost on {pokePost.createdAt}
+                had this pokeThought on {pokePost.createdAt}
               </span>
             </Link>
           ) : (
             <>
               <span style={{ fontSize: '1rem' }}>
-                You had this pokePost on {pokePost.createdAt}
+                You had this pokeThought on {pokePost.createdAt}
               </span>
             </>
           )}

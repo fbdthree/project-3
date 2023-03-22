@@ -34,12 +34,12 @@ const Profile = () => {
       </h4>
     );
   }
-
+  console.log(user.username)
   return (
     <div>
       <div className="flex-row justify-center mb-3">
         <h2 className="col-12 col-md-10 bg-danger text-light p-3 mb-5">
-          Welcome Trainer {userParam ? `${user.username}'s` : ''}!
+          Trainer {`${user.username}'s PokeThoughts`}!
         </h2>
         {!userParam && (
           <div
