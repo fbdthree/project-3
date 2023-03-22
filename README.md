@@ -1,5 +1,3 @@
-# pokeman
-Project 3 Interactive MERN Stack Single-Page Application
 # PokemAn - Pokemon Trading Card Game Discussion Board
 PokemAn is a MERN-stack single-page application that serves as a discussion board for the Pokémon Trading Card Game. Users can create an account, log in, and participate in discussions with other users. The application allows users to post questions, share tips and tricks, and discuss the latest news about the Pokémon Trading Card Game.
 
