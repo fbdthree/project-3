@@ -35,7 +35,7 @@ The application is deployed on Heroku and can be accessed at [insert deployed ap
 1.	Clone the repository to your local machine
 2.	Navigate to the root directory and run npm install to install dependencies
 3.	Navigate to the client directory and run npm install to install client dependencies
-4.	Create a .env file in the root directory and add your MongoDB Atlas connection string and Stripe API key as environment variables
+4.	Create a .env file in the root directory and add your MongoDB connection string as an environment variable.
 5.	Run npm run dev to start the development server
 6.	Open your browser and navigate to http://localhost:3000 to view the application
 
