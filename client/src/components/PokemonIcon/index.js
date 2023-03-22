@@ -6,12 +6,12 @@ export default function PokemonIcons() {
     const [loading, setLoading] = useState(false);
 
     useEffect(() => {
-        getAllPokemon();
+        getAllPokemon(151);
     }, []);
 
     const getAllPokemon = async (limit) => {
         setLoading(true);
-        const response = await axios.get(`https://pokeapi.co/api/v2/pokemon/?limit=1281`);
+        const response = await axios.get(`https://pokeapi.co/api/v2/pokemon/?limit=${limit}`);
         const pokemons = response.data.results
         const pokemonPromises = pokemons.map(pokemon => {
             const url = `${pokemon.url}`
@@ -47,8 +47,23 @@ export default function PokemonIcons() {
         )
     });
 
+    const RegionBtn = () => {
+        const regions = ['Kanto', 'Johto', 'Hoenn', 'Sinnoh', 'Unova', 'Kalos', 'Alola', 'Galar', 'Paldea']
+
+        return (
+            <div className='flex flex-wrap justify-center'>
+                {regions.map((region, index) =>
+                    <div className="rounded-xl overflow-hidden shadow-lg bg-slate-200 m-3">
+                        <button className='m-3' key={index}>{region}</button>
+                    </div>
+                )}
+            </div>
+        )
+    };
+
     return (
         <div>
+            <RegionBtn />
             <div className='flex flex-wrap justify-center'>{renderedList}</div>
         </div>
     )
