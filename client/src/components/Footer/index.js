@@ -182,7 +182,7 @@ const Footer = () => {
         </h4>
         <h2>Random Pokemon: {randomPokemon}</h2>
         {randomPokemonImageUrl && (
-          <img src={randomPokemonImageUrl} alt={`A picture of ${randomPokemon}`} />
+          <img className='block m-auto' src={randomPokemonImageUrl} alt={`A picture of ${randomPokemon}`} />
         )}
       </div>
     </footer>
