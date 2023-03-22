@@ -41,8 +41,8 @@ const Login = (props) => {
   };
 
   return (
-    <main className="flex-row justify-center container">
-      <div className="col-12 col-lg-10">
+    <main className="flex-row justify-center">
+      <div className="col-lg-8">
           <h4 className="card-header bg-danger text-light p-2 rounded-xl">Login</h4>
           <div className="card-body">
             {data ? (
