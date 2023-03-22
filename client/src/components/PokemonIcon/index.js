@@ -76,7 +76,7 @@ export default function PokemonIcons() {
             <div className='flex flex-wrap justify-center'>
                 {regions.map((region, index) =>
                     <div className="rounded-xl overflow-hidden shadow-lg bg-slate-200 m-3">
-                        <button onClick={handleClick} className='m-3 text-sm font-semibold leading-6 text-gray-900 ' key={index}>{region}</button>
+                        <button onClick={handleClick} className='m-3 text-sm font-semibold leading-6 text-gray-900' key={index}>{region}</button>
                     </div>
                 )}
             </div>

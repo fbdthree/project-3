@@ -69,6 +69,10 @@ function App() {
                 element={<Profile />}
               />
               <Route 
+                path="/pokeBlog"
+                element={<Profile />}
+              />
+              <Route 
                 path="/s/:pokePostId"
                 element={<SinglePokePost />}
               />
