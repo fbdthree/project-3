@@ -7,7 +7,7 @@ const CommentList = ({ comments = [] }) => {
 
   return (
     <>
-      <h3 className="pt-5  text-center">
+      <h3 className="pt-5 text-md text-center">
         Comments
       </h3>
       <div className="flex-row">
