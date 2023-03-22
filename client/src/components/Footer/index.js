@@ -161,7 +161,7 @@ const Footer = () => {
       <div className="container text-center mb-5">
         {location.pathname !== '/' && (
           <button
-            className="btn btn-dark mb-3"
+            className="btn btn-danger mb-3"
             onClick={() => navigate(-1)}
           >
             &larr; Go Back
