@@ -6,7 +6,7 @@ const PokePostList = ({
   showUsername = true,
 }) => {
   if (!pokePosts.length) {
-    return <h3>No PokePosts Yet</h3>;
+    return <h3 className='text-center m-8 p-4'>No PokePosts Yet</h3>;
   }
 
   const renderedList = pokePosts.map((pokePost) => {
