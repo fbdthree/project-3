@@ -9,37 +9,29 @@ const Header = () => {
     Auth.logout();
   };
   return (
-    <header className="bg-primary text-light mb-4 py-3 flex-row align-center">
-      <div className="container flex-row justify-space-between-lg justify-center align-center">
-        <div>
-          <Link className="text-light" to="/">
-            <h1 className="m-0">Pokeman</h1>
-          </Link>
-          <p className="m-0">Pokemon Comment Board</p>
-        </div>
-        <div>
-          {Auth.loggedIn() ? (
-            <>
-              <Link className="btn btn-lg btn-info m-2" to="/me">
-                {Auth.getProfile().data.username}'s profile
-              </Link>
-              <button className="btn btn-lg btn-light m-2" onClick={logout}>
-                Logout
-              </button>
-            </>
-          ) : (
-            <>
-              <Link className="btn btn-lg btn-info m-2" to="/login">
-                Login
-              </Link>
-              <Link className="btn btn-lg btn-light m-2" to="/signup">
-                Signup
-              </Link>
-            </>
-          )}
-        </div>
+<div>
+      <img className='block m-auto mt-4 w-60' src='Assets/pokeman.png' />
+      <div className="container mx-auto mt-10 px-4 bg-slate-200 rounded-xl">
+        <nav className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
+          <div className="lg:flex lg:gap-x-12">
+            <a href="/" className="text-sm font-semibold leading-6 text-gray-900">
+              Home
+            </a>
+            <a href="discussionBoard" className="text-sm font-semibold leading-6 text-gray-900">
+              Discussion Board
+            </a>
+            <a href="/dashBoard" className="text-sm font-semibold leading-6 text-gray-900">
+              Dashboard
+            </a>
+          </div>
+          <div className="hidden lg:flex lg:flex-1 lg:justify-end">
+            <a href="/login" className="text-sm font-semibold leading-6 text-gray-900">
+              Log in <span aria-hidden="true">&rarr;</span>
+            </a>
+          </div>
+        </nav>
       </div>
-    </header>
+    </div>
   );
 };
 
