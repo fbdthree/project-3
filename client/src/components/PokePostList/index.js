@@ -38,7 +38,7 @@ const PokePostList = ({
         <Link
           className="btn btn-danger btn-block btn-squared"
           to={`/s/${pokePost._id}`}
-        >pokePost
+        >
           Join the discussion on this pokePost.
         </Link>
 
