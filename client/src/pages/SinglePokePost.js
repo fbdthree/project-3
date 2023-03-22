@@ -25,30 +25,26 @@ const SinglePokePost = () => {
   }
   return (
     <div className="my-3">
-      <h3 className="card-header bg-dark text-light p-2 m-0">
+      <div className='rounded-xl overflow-hidden shadow-lg bg-slate-200 m-8'>
+      <h3 className="card-header bg-danger text-light p-2 m-0">
         {pokePost.pokePostAuthor} <br />
         <span style={{ fontSize: '1rem' }}>
           had this pokePost on {pokePost.createdAt}
         </span>
       </h3>
-      <div className="bg-light py-4">
+      <div className="py-4">
         <blockquote
-          className="p-4"
-          style={{
-            fontSize: '1.5rem',
-            fontStyle: 'italic',
-            border: '2px dotted #1a1a1a',
-            lineHeight: '1.5',
-          }}
+          className="m-3 leading-6 text-gray-900"
         >
           {pokePost.pokePostText}
         </blockquote>
       </div>
+    </div>
 
       <div className="my-5">
         <CommentList comments={pokePost.comments} />
       </div>
-      <div className="m-3 p-4" style={{ border: '1px dotted #1a1a1a' }}>
+      <div className="flex-row justify-center container mt-4 bg-slate-200 rounded-xl">
         <CommentForm pokePostId={pokePost._id} />
       </div>
     </div>

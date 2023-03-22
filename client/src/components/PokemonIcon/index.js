@@ -40,7 +40,7 @@ export default function PokemonIcons() {
     const renderedList = pokemonList.map((pokemon) => {
         return (
             <div className="rounded-xl overflow-hidden shadow-lg bg-slate-200 m-3" key={pokemon.id}>
-                <div className="text-right m-2 font-bold">#{pokemon.id}</div>
+                <div className="text-right m-2 text-sm">No. {pokemon.id}</div>
                 <img className="w-full" src={pokemon.sprites.front_default} />
                 <div className="m-3 text-sm font-semibold leading-6 text-gray-900 text-center">{pokemon.species.name}</div>
             </div>

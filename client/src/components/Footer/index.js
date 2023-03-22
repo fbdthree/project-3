@@ -180,7 +180,7 @@ const Footer = () => {
           </span>{' '}
           by the Pokemon team. 
         </h4>
-        <h2>Random Pokemon: {randomPokemon}</h2>
+        <h2>Random Pokemon Buddy: {randomPokemon}</h2>
         {randomPokemonImageUrl && (
           <img className='block m-auto' src={randomPokemonImageUrl} alt={`A picture of ${randomPokemon}`} />
         )}
