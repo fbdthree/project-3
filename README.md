@@ -45,6 +45,8 @@ The application is deployed on Heroku and can be accessed at [insert deployed ap
 *	Adding a grouping feature that allows the user to add the cards they have to their own collection to display them for other collectors to see (so that they could bid on them).
 *	Adding more payment platform options for accepting donations or payments (maybe you could buy cards or merch from the site as well as working deals to procure cards from other users for money. Maybe a responsible gambling feature could be added for players who want to challenge each other to battles.).
 
+## Demo
+*![Gif of Pokeman](./client/public/assets/images/pokeman.gif)
 
 ## Credits
 The development team for PokemAn includes [Monica Pong](https://github.com/monicapong), [Braden Dawson](https://github.com/fbdthree/) and [Jarrett Jennings](https://github.com/codingjarrett). We would like to thank our instructor and teaching assistants for their guidance throughout the development process.
