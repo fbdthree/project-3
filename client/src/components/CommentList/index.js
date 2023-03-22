@@ -2,7 +2,7 @@ import React from 'react';
 
 const CommentList = ({ comments = [] }) => {
   if (!comments.length) {
-    return <h3>No Comments Yet</h3>;
+    return <h3 className='m-3 font-semibold leading-6 text-gray-900 text-center'>No Comments Yet</h3>;
   }
 
   return (

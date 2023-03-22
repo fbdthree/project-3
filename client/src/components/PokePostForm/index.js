@@ -62,13 +62,13 @@ debugger
   };
 
   return (
-    <div>
-      <h3>What's on your techy mind?</h3>
+    <div className='col-12 p-5'>
+      <h3 className='font-semibold leading-6 text-gray-900'>What's on your PokeMind?</h3>
 
       {Auth.loggedIn() ? (
         <>
           <p
-            className={`m-0 ${characterCount === 280 || error ? 'text-danger' : ''
+            className={`m-0 text-sm leading-6 text-gray-900 ${characterCount === 280 || error ? 'text-danger' : ''
               }`}
           >
             Character Count: {characterCount}/280
@@ -89,7 +89,7 @@ debugger
             </div>
 
             <div className="col-12 col-lg-3">
-              <button className="btn btn-primary btn-block py-3" type="submit">
+              <button className="bg-red-500 btn btn-danger btn-block py-3" type="submit">
                 Add PokePost
               </button>
             </div>

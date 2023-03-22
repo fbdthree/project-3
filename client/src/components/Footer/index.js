@@ -161,7 +161,7 @@ const Footer = () => {
       <div className="container text-center mb-5">
         {location.pathname !== '/' && (
           <button
-            className="btn btn-dark mb-3"
+            className="btn btn-danger mb-3"
             onClick={() => navigate(-1)}
           >
             &larr; Go Back
@@ -180,9 +180,9 @@ const Footer = () => {
           </span>{' '}
           by the Pokemon team. 
         </h4>
-        <h2>Random Pokemon: {randomPokemon}</h2>
+        <h2>Random Pokemon Buddy: {randomPokemon}</h2>
         {randomPokemonImageUrl && (
-          <img src={randomPokemonImageUrl} alt={`A picture of ${randomPokemon}`} />
+          <img className='block m-auto' src={randomPokemonImageUrl} alt={`A picture of ${randomPokemon}`} />
         )}
       </div>
     </footer>
