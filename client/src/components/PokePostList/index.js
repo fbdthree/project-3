@@ -21,13 +21,13 @@ const PokePostList = ({
             >
               {pokePost.pokePostAuthor} <br />
               <span style={{ fontSize: '1rem' }}>
-                had this pokePost on {pokePost.createdAt}
+                had this pokeThought on {pokePost.createdAt}
               </span>
             </Link>
           ) : (
             <>
               <span style={{ fontSize: '1rem' }}>
-                You had this pokePost on {pokePost.createdAt}
+                You had this pokeThought on {pokePost.createdAt}
               </span>
             </>
           )}

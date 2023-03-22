@@ -29,7 +29,7 @@ const SinglePokePost = () => {
       <h3 className="card-header bg-danger text-light p-2 m-0">
         {pokePost.pokePostAuthor} <br />
         <span style={{ fontSize: '1rem' }}>
-          had this pokePost on {pokePost.createdAt}
+          had this pokeThought on {pokePost.createdAt}
         </span>
       </h3>
       <div className="py-4">
