@@ -10,7 +10,7 @@ const Header = () => {
   };
   return (
 <div>
-      <img className='block m-auto mt-4 w-60' src='Assets/pokeman.png' />
+      <img className='block m-auto mt-4 w-60' src='assets/images/pokemanlogo.png' />
       <div className="container mx-auto mt-10 px-4 bg-slate-200 rounded-xl">
         <nav className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
           <div className="lg:flex lg:gap-x-12">
