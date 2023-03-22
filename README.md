@@ -42,11 +42,11 @@ The application is deployed on Heroku and can be accessed at [insert deployed ap
 6.	Open your browser and navigate to http://localhost:3000 to view the application
 
 ## Future Development
-* Some directions for future development of the application include:
-* Adding more features for user engagement, such as a live chat or private messaging system
-* Implementing more advanced search and filtering functionality for posts
-* Improving the UI/UX design to enhance user experience
-* Adding more payment platform options for accepting donations or payments
+*	Adding more features for user engagement, such as a live chat or private messaging system (which would work to facilitate card trades, price haggling).
+*	Implementing more advanced search and filtering functionality for posts (giving you more freedom and ability to find the exact topic of discussion you would like to join or read).
+*	Adding a grouping feature that allows the user to add the cards they have to their own collection to display them for other collectors to see (so that they could bid on them).
+*	Adding more payment platform options for accepting donations or payments (maybe you could buy cards or merch from the site as well as working deals to procure cards from other users for money. Maybe a responsible gambling feature could be added for players who want to challenge each other to battles.).
+
 
 ## Credits
 The development team for PokemAn includes Monica Pong, Braden Dawson and Jarrett Jennings. We would like to thank our instructor and teaching assistants for their guidance throughout the development process.
