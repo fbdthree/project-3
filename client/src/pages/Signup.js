@@ -40,7 +40,7 @@ const Signup = () => {
 
   return (
     <main className="flex-row justify-center mb-4">
-      <div className="col-12 col-lg-10">
+      <div className="col-lg-8">
         <div className="card">
           <h4 className="card-header bg-danger text-light p-2 rounded-xl">Create new account</h4>
           <div className="card-body">
