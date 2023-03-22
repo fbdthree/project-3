@@ -32,7 +32,7 @@ export default function PokemonIcons() {
     if (loading) {
         return (
             <div>
-                <img className='block m-auto mt-4 w-60' src='Assets/loading.png' />
+                <img className='block m-auto mt-4 w-60' src='./assets/images/pokeloading.png' />
             </div>
         )
     };
