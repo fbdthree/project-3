@@ -50,11 +50,33 @@ export default function PokemonIcons() {
     const RegionBtn = () => {
         const regions = ['Kanto', 'Johto', 'Hoenn', 'Sinnoh', 'Unova', 'Kalos', 'Alola', 'Galar', 'Paldea']
 
+        const handleClick = (event) => {
+            if (event.target.innerText === 'Kanto') {
+                getAllPokemon(151);
+            } else if (event.target.innerText === 'Johto') {
+                getAllPokemon("100&offset=151");
+            } else if (event.target.innerText === 'Hoenn') {
+                getAllPokemon("135&offset=251")
+            } else if (event.target.innerText === 'Sinnoh') {
+                getAllPokemon("107&offset=386");
+            } else if (event.target.innerText === 'Unova') {
+                getAllPokemon("156&offset=493");
+            } else if (event.target.innerText === 'Kalos') {
+                getAllPokemon("72&offset=649");
+            } else if (event.target.innerText === 'Alola') {
+                getAllPokemon("88&offset=721");
+            } else if (event.target.innerText === 'Galar') {
+                getAllPokemon("96&offset=809");
+            } else {
+                getAllPokemon("103&offset=905");
+            };
+        };
+
         return (
             <div className='flex flex-wrap justify-center'>
                 {regions.map((region, index) =>
                     <div className="rounded-xl overflow-hidden shadow-lg bg-slate-200 m-3">
-                        <button className='m-3' key={index}>{region}</button>
+                        <button onClick={handleClick} className='m-3' key={index}>{region}</button>
                     </div>
                 )}
             </div>
